@@ -95,8 +95,8 @@ button {
   }
 }
 
-@media (max-height: 680px) {
+@media (max-height: 680px) and (max-width: 500px) {
    img {
-    max-width: 150px; 
+    max-width: 145px; 
   }
 }
