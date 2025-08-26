@@ -44,3 +44,36 @@ button {
   font-size: 20px;
   border-radius: 5px;
 }
+
+
+@media (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;   
+    margin: auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem; 
+  }
+
+  p {
+    font-size: 1.5rem; 
+  }
+
+  img {
+    max-width: 220px; 
+  }
+
+  button {
+    font-size: 16px;
+    padding-top: 5px;
+    padding: 8px 16px;
+    margin-bottom: 20px; 
+    display: inline-block;
+    width: 100px;
+    align-self: center;
+  }
+}
