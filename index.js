@@ -25,9 +25,9 @@ function rollDice() {
     if(randomNumber1 === randomNumber2){
         winner = "Draw!";
     } else if(randomNumber1 > randomNumber2){
-        winner = "🚩 Player 1 wins";
+        winner = "🚩 Computer wins";
     } else {
-        winner = "Player 2 wins 🚩";
+        winner = "You win! 🚩";
     }
 
     title.textContent = winner;
