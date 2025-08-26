@@ -80,10 +80,12 @@ html, body {
 
   p {
     font-size: 1.5rem; 
+    padding: 10px;
   }
 
   img {
-    max-width: 220px; 
+    width: 50%; 
+    max-width: 200px; 
   }
 
   button {
