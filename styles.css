@@ -68,6 +68,10 @@ button {
     width: 100%;   
     margin: auto;
     text-align: center;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
   }
 
   h1 {
@@ -91,5 +95,11 @@ button {
     display: inline-block;
     width: 100px;
     align-self: center;
+  }
+}
+
+@media (max-height: 700px) {
+   img {
+    max-width: 160px; 
   }
 }
