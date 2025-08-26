@@ -1,20 +1,35 @@
-var randomNumber1 = Math.floor((Math.random() * 6)) + 1;
+function rollDice() {
+  const dice1 = document.querySelector(".img1");
+  const dice2 = document.querySelector(".img2");
+  const title = document.querySelector("h1");
 
-var randomNumber2 = Math.floor((Math.random() * 6)) + 1;
+  title.textContent = "Rolling... 🎲";
 
-document.querySelector(".img1").setAttribute("src", "./images/dice" +randomNumber1+ ".png")
+  let interval = setInterval(() => {
+    let temp1 = Math.floor(Math.random() * 6) + 1;
+    let temp2 = Math.floor(Math.random() * 6) + 1;
+    dice1.setAttribute("src", "./images/dice" + temp1 + ".png");
+    dice2.setAttribute("src", "./images/dice" + temp2 + ".png");
+  }, 100); 
 
-document.querySelector(".img2").setAttribute("src", "./images/dice" +randomNumber2+ ".png")
+  setTimeout(() => {
+    clearInterval(interval);
 
-var winner;
+    var randomNumber1 = Math.floor((Math.random() * 6)) + 1;
+    var randomNumber2 = Math.floor((Math.random() * 6)) + 1;
 
+    dice1.setAttribute("src", "./images/dice" + randomNumber1 + ".png");
+    dice2.setAttribute("src", "./images/dice" + randomNumber2 + ".png");
 
-if(randomNumber1 === randomNumber2){
-    winner = "Draw!";
-}else if(randomNumber1 > randomNumber2){
-     winner = "🚩 Player 1 wins";
-}else{
-    winner = "Player 2 wins 🚩";
+    var winner;
+    if(randomNumber1 === randomNumber2){
+        winner = "Draw!";
+    } else if(randomNumber1 > randomNumber2){
+        winner = "🚩 Player 1 wins";
+    } else {
+        winner = "Player 2 wins 🚩";
+    }
+
+    title.textContent = winner;
+  }, 1000); 
 }
-
-document.querySelector("h1").innerHTML = winner;
