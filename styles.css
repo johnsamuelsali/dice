@@ -57,6 +57,10 @@ button {
   100% { transform: rotate(360deg); }
 }
 
+ body,html {
+    overflow-y: hidden;
+  }
+
 @media (max-width: 800px) {
   .container {
     display: flex;
@@ -75,7 +79,7 @@ button {
   }
 
   img {
-    max-width: 200px; 
+    max-width: 140px; 
   }
 
   button {
